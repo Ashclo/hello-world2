@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>ch.ivyteam.ivy.project.demo.ci</groupId>
+    <artifactId>crm.maven.config</artifactId>
+    <version>10.0.0-SNAPSHOT</version>
+    <relativePath>../crm.maven/config</relativePath>
+  </parent>
+
+  <artifactId>crmIntegrationTests</artifactId>
+  <version>10.0.0-SNAPSHOT</version>
+  <packaging>iar-integration-test</packaging>
+
+  <dependencies>
+    <dependency>
+      <groupId>ch.ivyteam.ivy.project.demo.ci</groupId>
+      <artifactId>crm</artifactId>
+      <version>10.0.0-SNAPSHOT</version>
+      <type>iar</type>
+    </dependency>
+    <dependency>
+      <groupId>com.axonivy.ivy.webtest</groupId>
+      <artifactId>web-tester</artifactId>
+      <version>${web.tester.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <testSourceDirectory>src_test</testSourceDirectory>
+    <testOutputDirectory>target/test-classes</testOutputDirectory>
+  </build>
+</project>
